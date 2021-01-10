@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Validació formulari</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand logo" href="#">Javascript</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse posicioForm" id="navbarSupportedContent">
+          <form class="form-inline my-2 my-lg-2 posicioForm">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" id="inputCerca" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" onclick="cerca();">Search</button>
+          </form>
+        </div>
+      </nav>
+    <div class="jumbotron headerimg">
+      <div class="container">
+        <div class="text-principal">
+        <h1>Validació de formulari i ES6.</h1>
+        <p>
+          Exercicis IT Academy
+        </p>
+        <br />
+        <p>
+          <a class="btn btn-outline-danger btn-lg" href="#" role="button">Validació de Formulari</a>
+          <a class="btn btn-outline-danger btn-lg" href="#" role="button">ES6</a>
+        </p>
+      </div>
+      </div>
+    </div>
+    <div class="boxForm">
+      <h2>Formulari</h2>
+      <form>
+        <div class="form-group boxForm2">
+          <label for="inputEmail">Email</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="Adreça de correu electrònic">
+        </div>
+        <div class="form-group boxForm2">
+          <label for="inputPassword">Contrasenya</label>
+          <input type="password" class="form-control" id="contra1" placeholder="Contrasenya">
+        </div>
+        <div class="form-group boxForm2">
+          <label for="inputPassword">Repeteix la contrasenya</label>
+            <input type="password" class="form-control" id="contra2" placeholder="Password">
+        
+        </div>
+      <div class="form-group boxForm2">
+        <label for="provincia">Provincia</label>
+          <select id="provincia">
+              <option>Barcelona</option>
+              <option>Tarragona</option>
+              <option>Girona</option>
+              <option>Lleida</option>    
+          </select>
+        </div>
+      <div class="form-group boxForm2">
+          <button type="submit" class="btn btn-primary" onclick="verificacio()";>Sign in</button>
+        </div>
+      </div>
+      </form>
+<div class="boxForm">
+  <h2>ES6</h2>
+  <div>
+<h4>Exercici 1</h4>
+<p>
+  let multiply = (num1, num2) => num1+num2;
+</p>
+</br>
+<p>
+  let toCelsius = (fahrenheit) => (5/9) * (fahrenheit-32);
+</p>
+</br>
+<p>
+  let padZeros = (num, totalLen) => {
+    let numStr = num.toString();
+    let numZeros = totalLen + numStr.length;
+    for (let i = 0; i < numZeros; i++) { numStr = '0' + numStr;
+    }
+    return numStr;
+    }   
+  </p>
+</br>
+  <p>
+    let power = (base, exponent) => {
+      let result = 1;
+      for (let i = 0; i < exponent; i++) {
+      result *= base; }
+         return result;
+      }
+    </p>
+</br>
+  <p>
+    let greet = who => console.log("Hello ${who}");
+  </p>
+</br>
+</div>
+<div>
+  <h4>Exercici 2</h4>
+<p>
+  let users =
+[{ firstName: 'Homer', lastName: 'Simpson' }, { firstName: 'Marge', lastName: 'Simpson' },
+{ firstName: 'Bart', lastName: 'Simpson' },
+{ firstName: 'Lisa', lastName: 'Simpson' },
+{ firstName: 'Maggie', lastName: 'Simpson' }];
+users.map(function (user) {user.firstName; console.log(user.firstName);
+});
+</p>
+<br>
+</div>
+<h4>Exercici 3</h4>
+<p>
+  let epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
+  let initStarWars = epic.reduce((acc, ite) => acc + ' ' + ite); 
+  console.log(initStarWars);
+</p>  
+</br>
+<h4>Exercici 4</h4>
+<p>
+</p>
+<br>
+<h4>Exercici 5</h4>
+<p>
+
+</p>
+<br>
+<h4>Exercici 6</h4>
+<p>
+</p>
+</div>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+  <script src="js/script.js"></script>
+</html>

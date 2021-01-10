@@ -1,0 +1,47 @@
+<html>
+<body>
+
+<br/><br/><br/><br/>
+
+<SCRIPT language="Javascript">
+<!--
+
+function verification(){
+
+/*
+if(!document.getElementById('contra1').value)alert('contrasenya obligatori');
+
+if(document.getElementById('contra1').value!=document.getElementById('contra2').value)alert('mot de passe différent');
+
+//lettres
+if(document.getElementById('email').value.length<3){
+	alert('email mes que 3 lettres');
+	document.getElementById('email').style.color=red;
+	}
+*/
+
+var RegEx = /^(([^<>()[]\.,;:s@]+(.[^<>()[]\.,;:s@]+)*)|(.+))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;
+if(RegEx.test(document.getElementById('email').value)){
+	document.getElementById('email').style.color = 'green';
+	alert("L'adresse mail est valide");	
+	}else{
+		alert("L'adresse mail n'est pas valide");
+		document.getElementById('email').style.color = 'red';
+		}
+
+	}// cap function
+
+//-->
+</SCRIPT>
+
+
+<input name="email" id="email" title="email" placeholder="email"><br/>
+<input name="contra1" id="contra1" placeholder="mot de passe"><br/>
+<input name="contra2" id="contra2" placeholder="verification du mot de passe"><br/>
+<select id="province"><option></option>
+<option>barcelona</option>
+<option>frança</option>
+</select>
+<button onclick="verification();">validacio</button>
+</body>
+</html>
